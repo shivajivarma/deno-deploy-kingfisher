@@ -6,8 +6,6 @@ const __dirname = path.dirname(path.fromFileUrl(import.meta.url));
 
 console.log(__dirname);
 
-const ROOT_PATH = path.normalize(__dirname+ '/**');
-
-for (const file of expandGlobSync(ROOT_PATH)) {
+for (const file of expandGlobSync(__dirname+ '/**')) {
   console.log("PATH" + file.path);
 }
