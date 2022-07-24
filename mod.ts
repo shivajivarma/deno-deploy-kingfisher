@@ -1,3 +1,5 @@
-import CommonUtils from 'https://raw.githubusercontent.com/justaos/utils/1.1.0/common-utils/mod.ts';
-const temp = CommonUtils.underscoreToCamelCase('hello_world');
-console.log(temp);
+import { existsSync, expandGlobSync, copy, copySync } from 'https://deno.land/std@0.95.0/fs/mod.ts';
+
+for (const file of expandGlobSync('**')) {
+  console.log("PATH" + file.path);
+}
